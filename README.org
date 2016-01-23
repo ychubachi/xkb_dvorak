@@ -1,11 +1,15 @@
-1) Edit
-  /usr/share/X11/xkb/symbols/jp
+1) Move xkb_dvorak/ to ~/.xkb/
+  mv xkb_dvorak ~/.xkb
 
-2) Clear cache
+2) Add following commands to .bashrc
+  xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
+
+4) Clear cache if necessary
   sudo rm /var/lib/xkb/*.xkm
 
 3) Restart
 
+- http://blog.cnu.jp/blog/2014/05/12/use-xkb/
 - http://askubuntu.com/questions/482678/how-to-add-a-new-keyboard-layout-custom-keyboard-layout-definition
 
 2015-05-13
