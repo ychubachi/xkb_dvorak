@@ -1,44 +1,20 @@
-1) Move xkb_dvorak/ to ~/.xkb/
-  mv xkb_dvorak ~/.xkb
+* How to use my dvorak layout
+1) Override xkb_symbols "dvorak" entry in /usr/share/X11/xkb/symbols/jp
+   with mydvorak file.
 
-2) Add following commands to .bashrc
-  xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
-
-4) Clear cache if necessary
+4) Clear cache.
   sudo rm /var/lib/xkb/*.xkm
 
-3) Restart
+3) Restart.
 
-- http://blog.cnu.jp/blog/2014/05/12/use-xkb/
-- http://askubuntu.com/questions/482678/how-to-add-a-new-keyboard-layout-custom-keyboard-layout-definition
+4) Set Caps Lock as Ctrl
 
-2015-05-13
+  https://wiki.ubuntulinux.jp/UbuntuTips/Desktop/HowToSetCapsLockAsCtrl
 
-日本語配列にする
-xkbを利用してDvorakにする
+* My Layout
+** Original Dvorak (JP106)
 
-xmodmapはMozcで使えない！
-
-http://blog.cnu.jp/2014/05/12/use-xkb/
-上を参考にする
-
-xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
-↑Mozcにすると戻る！！
-
-- CAPSをCtrlにする
-
-https://wiki.ubuntulinux.jp/UbuntuTips/Desktop/HowToSetCapsLockAsCtrl
-
-dconf。。。
-
-Dvorakを最適化する
-
-/usr/share/X11/xkb$ less symbols/jp
-上を修正する
-
-テスト用設定
-
-0) Dvorak (JP106)
+#+BEGIN_EXAMPLE
 ! " # $ % & ' ( ) 0 ` ~ |
 1 2 3 4 5 6 7 8 9 0 @ ^ ¥
 --------------------------
@@ -50,23 +26,11 @@ Dvorakを最適化する
 --------------------------
    ; q j k x b m w v z \
    + Q J K X B M W V Z _
+#+END_EXAMPLE
 
+** My Dvorak
 
-1) Current
-! @ # $ % ^ & * ( ) { } x
-1 2 3 4 5 6 7 8 9 0 [ ] x
---------------------------
- " < > P Y F G C R L ? +
- ' , . p y f g c r l / =
---------------------------
-  A O E U I D H T N S _ }
-  a o e u i d h t n s - ]
---------------------------
-   : Q J K X B M W V Z _
-   ; q j k x b m w v z \
-
-2)
-
+#+BEGIN_EXAMPLE
 ! @ # $ % ^ & * ( ) { } x
 1 2 3 4 5 6 7 8 9 0 [ ] x
 --------------------------
@@ -78,6 +42,7 @@ Dvorakを最適化する
 --------------------------
    : Q J K X B M W V Z ~*
    ; q j k x b m w v z `*
+#+END_EXAMPLE
 
 
 
