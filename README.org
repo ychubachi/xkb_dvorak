@@ -1,6 +1,6 @@
 * How to use my dvorak layout
 1) Override xkb_symbols "dvorak" entry in /usr/share/X11/xkb/symbols/jp
-   with mydvorak file.
+   with mydvorak.txt file.
 
 4) Clear cache.
   sudo rm /var/lib/xkb/*.xkm
